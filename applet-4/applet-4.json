@@ -1,0 +1,14 @@
+[
+  {
+    "student_name": "John Doe",
+    "student_program": "BS-Computer Science"
+  },
+  {
+    "student_name": "Jane Smith",
+    "student_program": "BS-Computer Engineering"
+  },
+  {
+    "student_name": "Bob Johnson",
+    "student_program": "BS - Information Technology"
+  }
+]
