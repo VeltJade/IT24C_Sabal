@@ -7,40 +7,36 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <title>IT24 Resources</title>
     <style>
-        .applet-flex-container{
-            display:flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            align-items: center;
-            margin-top: 2rem;
-            margin-left: 2rem;
-            width: 80%;
-        }
+      .applet-flex-container {
+          display: flex;
+          justify-content: flex-start;
+          flex-wrap: wrap;
+          align-items: center;
+          margin-top: 2rem;
+          width: 90%;
+          margin: 0 auto;
+      }
 
-        .applet-flex-container > div{
-            margin-left: .5rem;
-        }
+      .title {
+          margin-top: 1rem;
+          text-align: center;
+      }
 
-        .title{
-            margin-top: 1rem;
-            margin-left: 3rem;
-            justify-content: center;
-            flex-wrap: wrap;
-            align-items: center;
-        }
-
-        .applet-card{
-          width: 25rem;
-          height: 12rem;
+      .applet-card {
+          flex: 1 1 20rem; 
+          max-width: 20rem;
           margin-bottom: 1rem;
-        }
-
-        
+          box-sizing: border-box;
+      }
       
+      .applet-icon {
+          height: 3rem;
+          width: 3rem;
+      }
     </style>
 </head>
 
-<nav class="navbar navbar-expand-lg bg-body-tertiary">
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container-fluid">
       <a class="navbar-brand" href="index.html">Home</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -53,9 +49,12 @@
               Applets
             </a>
             <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="applet-1/applet-1.html">Applet 1</a></li>
-              <li><a class="dropdown-item" href="applet-2/applet-2.html">Applet 2</a></li>
-              <li><a class="dropdown-item" href="./applet-3/">Applet 3</a></li>
+              <li><a class="dropdown-item" href="./applet-1/applet-1.html">Applet 1</a></li>
+              <li><a class="dropdown-item" href="./applet-2/applet-2.html">Applet 2</a></li>
+              <li><a class="dropdown-item" href="./applet-3/applet-3.html">Applet 3</a></li>
+              <li><a class="dropdown-item" href="./applet-4/applet-4.html">Applet 4</a></li>
+              <li><a class="dropdown-item" href="./applet-5/">Applet 5</a></li>
+              <li><a class="dropdown-item" href="./applet-6/">Applet 6</a></li>
             </ul>
           </li>
           <li class="nav-item">
@@ -63,7 +62,7 @@
           </li>
         </ul>
         <form class="d-flex" role="search">
-          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+          <input class="form-control me-2" type="search" aria-label="Search" id="searchApplet" placeholder="Search applets...">
           <button class="btn btn-outline-success" type="submit">Search</button>
         </form>
       </div>
@@ -72,35 +71,9 @@
 
 <body>
 
-    <h1 class="title" >Event Driven Programming Library</h1>
-      <div class="applet-flex-container">
-          <!--Applet 1 Card-->
-          <div class="card applet-card" >
-              <div class="card-body">
-                <h5 class="card-title">Applet 1 - Basic Events </h5>
-                <p class="card-text">This application contains the basic implementation of DOM events</p>
-                <a href="applet-1/applet-1.html" class="btn btn-primary">Go to Applet</a>
-              </div>
-          </div>
+    <h1 class="title">Event Driven Programming Library</h1>
+    <div class="applet-flex-container" id="applet-container"></div>
 
-          <!--Applet 2 Card-->
-          <div class="card applet-card" >
-            <div class="card-body">
-              <h5 class="card-title">Applet 2 - Leaflet Map</h5>
-              <p class="card-text">This application contains the basic web map</p>
-              <a href="applet-2/applet-2.html" class="btn btn-primary">Go to Applet</a>
-            </div>
-          </div>
-
-          <!--Applet 3 Card-->
-          <div class="card applet-card" >
-            <div class="card-body">
-              <h5 class="card-title">Applet 3 - Event Button Logger </h5>
-              <p class="card-text">This application applies recording events while using HTML elements such as buttons</p>
-              <a href="./applet-3/" class="btn btn-primary">Go to Applet</a>
-            </div>
-          </div>
-          
-      </div>
+<script src="applets.js"></script>
 </body>
 </html>
